@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Page background -->
+  <rect width="32" height="32" rx="5" fill="#0a0f0e"/>
+
+  <!-- Card body -->
+  <rect x="5" y="2" width="22" height="28" rx="2.5" fill="#111a17" stroke="#52e891" stroke-width="1.5"/>
+
+  <!-- Corner bracket accents (mirrors the real card UI) -->
+  <polyline points="5,7 5,2 10,2"   fill="none" stroke="#52e891" stroke-width="1.5" stroke-linecap="square"/>
+  <polyline points="22,2 27,2 27,7"  fill="none" stroke="#52e891" stroke-width="1.5" stroke-linecap="square"/>
+  <polyline points="5,25 5,30 10,30" fill="none" stroke="#52e891" stroke-width="1.5" stroke-linecap="square"/>
+  <polyline points="22,30 27,30 27,25" fill="none" stroke="#52e891" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Avatar circle -->
+  <circle cx="16" cy="12" r="5" fill="#0d2a1a" stroke="#52e891" stroke-width="1"/>
+  <!-- Pixel eyes -->
+  <rect x="13.5" y="10.5" width="1.5" height="1.5" fill="#52e891"/>
+  <rect x="17"   y="10.5" width="1.5" height="1.5" fill="#52e891"/>
+  <!-- Pixel smile -->
+  <polyline points="13.5,14 15,15.5 17,15.5 18.5,14" fill="none" stroke="#52e891" stroke-width="0.9" stroke-linecap="round"/>
+
+  <!-- Name bar -->
+  <rect x="8" y="19.5" width="16" height="2" rx="1" fill="#52e891" opacity="0.7"/>
+
+  <!-- Two trait badge bars -->
+  <rect x="8"  y="23" width="6.5" height="1.5" rx="0.75" fill="#52e891" opacity="0.4"/>
+  <rect x="17.5" y="23" width="6.5" height="1.5" rx="0.75" fill="#52e891" opacity="0.4"/>
+
+  <!-- Card number line -->
+  <rect x="10" y="26.5" width="12" height="1" rx="0.5" fill="#52e891" opacity="0.25"/>
+</svg>
