@@ -208,7 +208,7 @@ const TradingCard = ({
         backfaceVisibility: "hidden",
         WebkitBackfaceVisibility: "hidden"
       }}>
-          <div className="w-full h-full p-6 bg-card border-2 border-primary/60 relative overflow-hidden cursor-pointer" onClick={handleFlip} onMouseMove={handleMouseMove} onMouseEnter={() => setShowFlipHint(true)} onMouseLeave={() => setShowFlipHint(false)} style={{
+          <div data-card-front className="w-full h-full p-6 bg-card border-2 border-primary/60 relative overflow-hidden cursor-pointer" onClick={handleFlip} onMouseMove={handleMouseMove} onMouseEnter={() => setShowFlipHint(true)} onMouseLeave={() => setShowFlipHint(false)} style={{
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)"
         }}>
             {/* Subtle corner accents */}
@@ -222,9 +222,9 @@ const TradingCard = ({
               <div className="w-32 h-32 rounded-lg border border-primary/30 bg-muted/10 overflow-hidden">
                 <img src={avatar} alt={name} className="w-full h-full object-cover" />
               </div>
-              <Button onClick={(e) => { e.stopPropagation(); handleFlip(); }} onMouseEnter={() => setShowFlipHint(false)} onMouseLeave={() => setShowFlipHint(true)} size="icon" className="h-10 w-10 absolute top-0 right-0" title="Flip card">
+              {/* <Button onClick={(e) => { e.stopPropagation(); handleFlip(); }} onMouseEnter={() => setShowFlipHint(false)} onMouseLeave={() => setShowFlipHint(true)} size="icon" className="h-10 w-10 absolute top-0 right-0" title="Flip card">
                 <Share2 className="w-4 h-4" />
-              </Button>
+              </Button> */}
             </div>
 
             {/* Name - Increased size */}

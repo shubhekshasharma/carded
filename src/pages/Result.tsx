@@ -392,8 +392,7 @@ const Result = () => {
 
   const handleShare = async () => {
     if (!cardData) return;
-    
-    // Create payload and generate share URL
+
     const payload: CardPayload = {
       v: 1,
       name: cardData.name,
@@ -412,7 +411,7 @@ const Result = () => {
     };
 
     const shareUrl = generateShareURL(payload);
-    
+
     if (navigator.share) {
       try {
         await navigator.share({
@@ -420,27 +419,20 @@ const Result = () => {
           text: "Check out my digital card!",
           url: shareUrl,
         });
-      } catch (error) {
-        // User cancelled share, fallback to clipboard
+      } catch {
         navigator.clipboard.writeText(shareUrl);
-        toast({
-          title: "LINK COPIED!",
-          description: "Share your card with friends!",
-        });
+        toast({ title: "LINK COPIED!", description: "Share your card with friends!" });
       }
     } else {
       navigator.clipboard.writeText(shareUrl);
-      toast({
-        title: "LINK COPIED!",
-        description: "Share your card with friends!",
-      });
+      toast({ title: "LINK COPIED!", description: "Share your card with friends!" });
     }
   };
 
   const handleDownload = async () => {
     try {
       const { default: html2canvas } = await import('html2canvas');
-      const cardElement = document.querySelector('[data-card-element]');
+      const cardElement = document.querySelector('[data-card-front]');
       
       if (!cardElement) {
         toast({
